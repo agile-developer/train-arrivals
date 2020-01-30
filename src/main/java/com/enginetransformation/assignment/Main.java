@@ -92,6 +92,7 @@ public class Main {
         arrivals.forEach(arrival -> {
             System.out.println("--------------------------------------------------");
             System.out.println("Line: " + arrival.getLineName());
+            System.out.println("Mode: " + arrival.getMode());
             System.out.println("Platform: " + arrival.getPlatformName());
             System.out.println("Arriving in: " + arrival.getTimeToStationInMinutes() + " mins.");
             System.out.println("End destination: " + arrival.getDestinationName());

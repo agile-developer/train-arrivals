@@ -1,5 +1,7 @@
 package com.enginetransformation.assignment.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.Date;
 
 public class Arrival {
@@ -13,6 +15,8 @@ public class Arrival {
     private String towards;
     private Date expectedArrival;
     private int timeToStation;
+    @JsonProperty(value = "modeName")
+    private Mode mode;
 
     public String getId() {
 
@@ -107,5 +111,15 @@ public class Arrival {
     public int getTimeToStationInMinutes() {
 
         return timeToStation / 60;
+    }
+
+    public Mode getMode() {
+
+        return mode;
+    }
+
+    public void setMode(Mode mode) {
+
+        this.mode = mode;
     }
 }
