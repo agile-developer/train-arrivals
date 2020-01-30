@@ -47,7 +47,7 @@ public class TflApiClientImpl implements TransportApiClient {
 
         if (name == null || "".equals(name.trim())) return Collections.emptyList();
 
-        HttpRequest.Builder requestBuilder = requestBuilder(BASE_URL + SEARCH_STATION + "/" + name + "?modes=tube");
+        HttpRequest.Builder requestBuilder = requestBuilder(BASE_URL + SEARCH_STATION + "/" + name + "?modes=tube&includeHubs=false");
         HttpRequest request = requestBuilder.GET().build();
         String responseString = executeRequest(request);
         try {
